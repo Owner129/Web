@@ -22,7 +22,7 @@ gulp.task("html", function () {
 });
   
 gulp.task("scss", function () {
-    return gulp.src("app/sass/*.scss")
+    return gulp.src("app/scss/*.scss")
     .pipe(concat("styles.scss"))
     .pipe(autoprefixer({ overrideBrowserslist: ["last 2 versions"], cascade: false,}))
     .pipe(cssnano())
@@ -47,6 +47,6 @@ gulp.task('imgs', function (){
 gulp.task("watch", function () {
     gulp.watch("app/*.html", gulp.series("html"));
     gulp.watch("app/js/*.js", gulp.series("scripts"));
-    gulp.watch("app/sass/*.sass", gulp.series("sass"));
+    gulp.watch("app/scss/*.scss", gulp.series("scss"));
     gulp.watch("app/img/*.{jpg,jpeg,png,gif}", gulp.series("imgs"));
   });
