@@ -21,15 +21,16 @@ gulp.task("html", function () {
     return gulp.src("app/*.html").pipe(gulp.dest("dist"));
 });
   
-gulp.task("scss", function () {
-    return gulp.src("app/scss/*.scss")
-    .pipe(concat("styles.scss"))
+gulp.task("css", function (){
+    return gulp.src("app/css/*.css")
+    .pipe(concat("style.css"))
     .pipe(autoprefixer({ overrideBrowserslist: ["last 2 versions"], cascade: false,}))
     .pipe(cssnano())
     .pipe(rename({ suffix: ".min" }))
     .pipe(gulp.dest("dist/css"))
     .pipe(browser_sync.stream());
-});
+})
+
 gulp.task("scripts", function () {
   return gulp
   .src("app/js/*.js")
@@ -47,6 +48,6 @@ gulp.task('imgs', function (){
 gulp.task("watch", function () {
     gulp.watch("app/*.html", gulp.series("html"));
     gulp.watch("app/js/*.js", gulp.series("scripts"));
-    gulp.watch("app/scss/*.scss", gulp.series("scss"));
+    gulp.watch("app/css/*.css", gulp.series("css"));
     gulp.watch("app/img/*.{jpg,jpeg,png,gif}", gulp.series("imgs"));
   });
