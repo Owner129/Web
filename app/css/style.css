@@ -1,0 +1,51 @@
+ul{
+    list-style-type: none;
+}
+nav{
+    color: #F1F2F2;
+}
+button{
+    background-color: #414042;
+    color: #F1F2F2;
+    border: none;
+    width: 290px;
+    height: 50px;
+    padding-left: 32px;
+    font-size: 1px;
+}
+
+.header_logo {
+    background-color: #313131;
+    padding-top: 29px;
+    padding-left: 29px;
+    color: #F1F2F2;
+    width: 290px;
+    height: 80px;
+    float: left;
+    font-size: 23px;
+
+}
+.header_bar {
+    background-color: #188AE2;
+    padding-top: 30px;
+    margin-left: 290px;
+    height: 80px;
+    position: fixed;
+}
+.left_side_bar {
+    width: 290px;
+    height: 100%; 
+    background-color: #414042;
+    color: #F1F2F2;
+    top: 80px; 
+    position: absolute;
+    display: block;
+    -webkit-tap-highlight-color:transparent;
+
+}
+
+.left_menu{
+    display: block;
+   
+   
+}
